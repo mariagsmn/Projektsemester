@@ -1,9 +1,8 @@
-```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Farbige Quadrate</title>
+<title>Übersicht</title>
 <style>
   body {
     display: flex;
@@ -15,15 +14,32 @@
   }
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 120px);
-    grid-template-rows: repeat(2, 120px);
+    grid-template-columns: repeat(3, 160px);
+    grid-template-rows: repeat(2, 160px);
     gap: 24px;
   }
   .square {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: transform 0.15s ease;
+  }
+  .square:hover {
+    transform: scale(1.05);
   }
   .s1 { background: #e63946; }
   .s2 { background: #f4a261; }
@@ -35,13 +51,12 @@
 </head>
 <body>
   <div class="grid">
-    <div class="square s1"></div>
-    <div class="square s2"></div>
-    <div class="square s3"></div>
-    <div class="square s4"></div>
-    <div class="square s5"></div>
-    <div class="square s6"></div>
+    <a class="square s1" href="./7C1A0016.jpg">Bilder</a>
+    <a class="square s2" href="./7C1A0235.jpg">Videos</a>
+    <a class="square s3" href="./7C1A0324.jpg">Podcast</a>
+    <a class="square s4" href="./7C1A0383.jpg">Interviews</a>
+    <a class="square s5" href="./7C1A9919 1.jpg">WPMs/WPVs</a>
+    <a class="square s6" href="./7C1A9949 1.jpg">Was geht in Fuwa?</a>
   </div>
 </body>
 </html>
-```
