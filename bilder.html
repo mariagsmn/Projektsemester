@@ -4,15 +4,60 @@
 <meta charset="UTF-8">
 <title>Bilder</title>
 <style>
-  body { display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh; margin:0; background:#fff0f0; font-family: sans-serif; }
-  h1 { color:#e96c76; }
-  img { max-width: 80%; max-height: 70vh; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.2); }
-  a { margin-top: 24px; color:#000000; text-decoration:none; font-weight:bold; }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #fff0f0;
+    font-family: sans-serif;
+  }
+  h1 { color:#e63946; margin-bottom: 8px; }
+  p.hint { color:#e63946; opacity: 0.7; margin-top: 0; font-size: 0.9rem; }
+
+  .slideshow {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 24px;
+    width: 80%;
+    max-width: 900px;
+    padding: 12px 0 20px 0;
+    -webkit-overflow-scrolling: touch;
+  }
+  .slideshow::-webkit-scrollbar {
+    height: 8px;
+  }
+  .slideshow::-webkit-scrollbar-thumb {
+    background: #e6394680;
+    border-radius: 4px;
+  }
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .slide img {
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  }
+  a.back { margin-top: 24px; color:#e63946; text-decoration:none; font-weight:bold; }
 </style>
 </head>
 <body>
   <h1>Bilder</h1>
-  <img src="./7C1A0016.jpg" alt="Bilder">
-  <a href="index.html">&larr; zurück</a>
+  <p class="hint">&larr; scrollen, um weitere Bilder zu sehen &rarr;</p>
+  <div class="slideshow">
+    <div class="slide"><img src="./7C1A0235.jpg" alt="Bild 1"></div>
+    <div class="slide"><img src="./7C1A0324.jpg" alt="Bild 2"></div>
+    <div class="slide"><img src="./7C1A0016.jpg" alt="Bild 3"></div>
+    <div class="slide"><img src="./7C1A0098.jpg" alt="Bild 4"></div>
+  </div>
+  <a class="back" href="squares.html">&larr; zurück</a>
 </body>
 </html>
